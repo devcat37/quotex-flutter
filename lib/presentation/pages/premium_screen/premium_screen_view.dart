@@ -20,22 +20,28 @@ class _PremiumScreenViewState extends State<PremiumScreenView> {
 
   Widget _buildImage(BuildContext context) {
     return Stack(
-      alignment: Alignment.bottomLeft,
+      alignment: Alignment.topCenter,
       children: [
-        Image.asset('assets/premium.png'),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
-          child: Text.rich(
-            TextSpan(
-              style: TextStyle(fontSize: 27.w, color: whiteColor, fontWeight: FontWeight.bold),
-              children: [
-                const TextSpan(text: 'Be up-to-date\n'),
-                TextSpan(
-                  text: 'Unlimited access',
-                  style: TextStyle(fontSize: 27.w, color: greenColor, fontWeight: FontWeight.bold),
-                ),
-                const TextSpan(text: ' to all trading signals'),
-              ],
+        Image.asset(
+          'assets/premium.png',
+          fit: BoxFit.contain,
+        ),
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            child: Text.rich(
+              TextSpan(
+                style: TextStyle(fontSize: 27.w, color: whiteColor, fontWeight: FontWeight.bold),
+                children: [
+                  const TextSpan(text: 'Be up-to-date\n'),
+                  TextSpan(
+                    text: 'Unlimited access',
+                    style: TextStyle(fontSize: 27.w, color: greenColor, fontWeight: FontWeight.bold),
+                  ),
+                  const TextSpan(text: ' to all trading signals'),
+                ],
+              ),
             ),
           ),
         ),
@@ -140,11 +146,14 @@ class _PremiumScreenViewState extends State<PremiumScreenView> {
   Widget _buildContent(BuildContext context) {
     return Column(
       children: [
-        _buildImage(context),
+        Expanded(
+          child: _buildImage(context),
+        ),
         SizedBox(height: 16.h),
         _buildButton(context),
         SizedBox(height: 16.h),
         _buildPrivacyTermsRestore(context),
+        SizedBox(height: 16.h)
       ],
     );
   }

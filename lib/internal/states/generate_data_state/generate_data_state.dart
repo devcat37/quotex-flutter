@@ -125,16 +125,23 @@ abstract class _GenerateDataStateBase with Store {
   }
 
   Future<void> _loadCachedData() async {
-    final SignalsData data = service<Settings>().signalsData;
+    try {
+      final SignalsData data = service<Settings>().signalsData;
 
-    stocksSignals = data.stockSignals.asObservable();
-    commoditySignals = data.commoditySignals.asObservable();
-    currencySignals = data.currencySignals.asObservable();
-    lastUpdate = data.lastUpdate;
+      stocksSignals = data.stockSignals.asObservable();
+      commoditySignals = data.commoditySignals.asObservable();
+      currencySignals = data.currencySignals.asObservable();
+      lastUpdate = data.lastUpdate;
+    } catch (_) {}
   }
 
   Future<void> initialize() async {
     await _loadCachedData();
+
+    // Если данные не загружены, то генерируем начальные.
+    if (stocksSignals.isEmpty || commoditySignals.isEmpty || currencySignals.isEmpty) {
+      _handleDataUpdate();
+    }
 
     Stream.periodic(_updatePeriod).listen((_) => _handleDataUpdate());
   }
