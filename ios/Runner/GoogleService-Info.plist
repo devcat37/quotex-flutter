@@ -10,21 +10,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>218563922955-0uieskf7pf8nu0seoeh114gdcij4u2ip.apps.googleusercontent.com</string>
+	<string>712896505350-bn2ak1e75q1o69k8p6iatp4t1vka879r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.218563922955-0uieskf7pf8nu0seoeh114gdcij4u2ip</string>
+	<string>com.googleusercontent.apps.712896505350-bn2ak1e75q1o69k8p6iatp4t1vka879r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDPKeELqC4UXtlSfhzPmJeG2wf0e4-TBbk</string>
+	<string>AIzaSyBbC2hdu5D6LinBkpx987aTj1M43w8CQoQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>218563922955</string>
+	<string>712896505350</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.devcat37.quotex</string>
+	<string>com.quotexsig.assistant</string>
 	<key>PROJECT_ID</key>
-	<string>quotex-4632f</string>
+	<string>quotex-signal-assistant</string>
 	<key>STORAGE_BUCKET</key>
-	<string>quotex-4632f.appspot.com</string>
+	<string>quotex-signal-assistant.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -36,6 +36,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:218563922955:ios:e22dba58fbc7a9c32c0b0e</string>
+	<string>1:712896505350:ios:3639215dfde3d0fd4f0587</string>
+	<key>DATABASE_URL</key>
+	<string>https://quotex-signal-assistant-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
